@@ -1,7 +1,9 @@
 
 .page-header {
-    background-color: #C25100;
+    background-color: #089ba8;
     margin-top: 0;
+    margin-bottom: 0;
+    border: none;
     padding: 20px 20px 20px 40px;
 }
 
@@ -9,6 +11,66 @@
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
+}
+
+.menu-bar{
+    margin-bottom: 20;
+	padding: 0;
+	list-style: none;
+	background-color: #333;
+
+}
+
+.menu-bar ul li {
+	display: inline-block;
+	position: relative;
+	text-align: left;
+	background-color: #333;
+}
+
+.menu-bar li a, .dropbtn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+	font-size: 15px;
+}
+
+.menu-bar li a:hover, .dropdown:hover, .dropbtn {
+    background-color: #111;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 15px 0px rgba(0,0,0,0.2);
+    padding: 0px 0px;
+    z-index: 999;
+	left: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .content {
@@ -37,6 +99,7 @@ h1, h2, h3, h4 {
     font-size: 26pt;
     margin-right: 20px;
 }
+
 
 .post {
     margin-bottom: 70px;
