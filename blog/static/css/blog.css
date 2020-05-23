@@ -39,13 +39,10 @@
 	font-size: 15px;
 }
 
-.dropbtn:hover{
+.menu-bar li a:hover, .dropdown:hover, .dropbtn:hover {
+    background-color: #111;
     text-decoration: none;
     color: white;
-}
-
-.menu-bar li a:hover, .dropdown:hover, .dropbtn {
-    background-color: #111;
 }
 
 .dropdown {
