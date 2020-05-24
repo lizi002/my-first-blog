@@ -9,13 +9,14 @@
     </head>
 
     <body>
+    <div class="header-navigation">
         <div class="page-header">
             {% block head %}
             {% endblock %}
             <h1><a href="/">lizi9902's Blog</a></h1>
         </div>
 
-        <div class="menu-bar">
+        <div class="navigation-bar">
             <ul>
                 <li><a class="active" href="/">Home</a></li><li><a href="{% url 'post_list' %}">Posts</a></li><div class="dropdown">
                     <a href="/" class="dropbtn">dropdown</a>
@@ -27,6 +28,7 @@
                 </div>
             </ul>
         </div>
+    </div>
 
         <div class="content container">
             <div class="row">

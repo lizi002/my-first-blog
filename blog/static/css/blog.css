@@ -1,4 +1,13 @@
 
+.header-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
 .page-header {
     background-color: #089ba8;
     margin-top: 0;
@@ -11,24 +20,23 @@
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
+
 }
 
-.menu-bar{
-    margin-bottom: 20px;
+.navigation-bar{
 	padding: 0;
 	list-style: none;
 	background-color: #333;
-
 }
 
-.menu-bar ul li {
+.navigation-bar ul li {
 	display: inline-block;
 	position: relative;
 	text-align: left;
 	background-color: #333;
 }
 
-.menu-bar li a, .dropbtn {
+.navigation-bar li a, .dropbtn {
     display: block;
     color: white;
     text-align: center;
@@ -39,7 +47,7 @@
 	font-size: 15px;
 }
 
-.menu-bar li a:hover, .dropdown:hover, .dropbtn:hover {
+.navigation-bar li a:hover, .dropdown:hover, .dropbtn:hover {
     background-color: #111;
     text-decoration: none;
     color: white;
@@ -77,6 +85,8 @@
 
 .content {
     margin-left: 40px;
+    position: relative;
+    margin-top: 200px;
 }
 
 h1, h2, h3, h4 {
