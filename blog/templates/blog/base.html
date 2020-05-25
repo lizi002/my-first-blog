@@ -11,8 +11,6 @@
     <body>
     <div class="header-navigation">
         <div class="page-header">
-            {% block head %}
-            {% endblock %}
             <h1><a href="/">lizi9902's Blog</a></h1>
         </div>
 
@@ -26,6 +24,8 @@
                         <a href="#">link 3</a>
                     </div>
                 </div>
+                    {% block navigation %}
+                    {% endblock %}
             </ul>
         </div>
     </div>

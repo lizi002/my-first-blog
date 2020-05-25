@@ -1,4 +1,11 @@
-{% extends 'blog/post_base.html' %}
+{% extends 'blog/base.html' %}
+{% block navigation %}
+    {% if user.is_authenticated %}
+        <div class="submission-choice">
+            <a href="{% url 'post_new' %}">Create</a>
+        </div>
+    {% endif %}
+{% endblock %}
 
 {% block content %}
     {% for post in posts %}

@@ -57,5 +57,5 @@ def post_delete(request, pk):
             post.delete()
             return redirect('post_list')
     else:
-        form = PostForm(instance=post)
-    return render(request, 'blog/post_edit.html', {'form': form})
+        post.delete()
+    return redirect('post_list')
