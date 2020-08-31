@@ -20,7 +20,6 @@
 {% endblock %}
 
 {% block content %}
-
     <h2>Edit or New post</h2>
     <form id="post-editor-form" method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
