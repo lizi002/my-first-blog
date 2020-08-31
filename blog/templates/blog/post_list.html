@@ -8,13 +8,21 @@
 {% endblock %}
 
 {% block content %}
-    {% for post in posts %}
-        <div class="post">
-            <div class="date">
-                {{ post.published_date }}
+      {% if error_msg %}
+          <p>{{ error_msg }}</p>
+      {% endif %}
+
+      {% for post in posts %}
+            <div class="post">
+                <div class="date">
+                    {{ post.published_date }}
+                </div>
+                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
             </div>
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
-        </div>
-    {% endfor %}
+      {% empty %}
+          <div class="no-post">
+              <p>No content found</p>
+          </div>
+      {% endfor %}
 {% endblock %}

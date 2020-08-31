@@ -7,6 +7,7 @@
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link rel="stylesheet" href="{% static 'css/navigation_bar.css' %}">
+        <link rel="stylesheet" href="{% static 'css/navigation_bar.css' %}">
         {% block head %}
         {% endblock %}
     </head>
@@ -19,13 +20,23 @@
 
         <div class="navigation-bar">
             <ul>
-                <li><a class="active" href="/">Home</a></li><li><a href="{% url 'post_list' %}">Posts</a></li><div class="dropdown">
+                <li><a class="active" href="/">Home</a></li><li><a href="{% url 'post_list' %}">Posts</a></li>
+
+                <div class="dropdown">
                     <a href="/" class="dropbtn">dropdown</a>
                     <div class="dropdown-content">
                         <a href="#">link 1</a>
                         <a href="#">link 2</a>
                         <a href="#">link 3</a>
                     </div>
+                </div>
+
+                <div class="search bar">
+                    <form role="search" method="get" id="searchform" action="{% url 'search' %}">
+                        {% csrf_token %}
+                        <input name="search-input" class = "bar-default-content" type="search" placeholder="Search!" required>
+                        <button type="submit">?</button>
+                    </form>
                 </div>
                     {% block navigation %}
                     {% endblock %}

@@ -83,3 +83,15 @@ def post_delete(request, pk):
     else:
         post.delete()
     return redirect('post_list')
+
+
+def search(request):
+    search_input = request.GET.get('search-input')
+    error_msg = ''
+
+    if not search_input:
+        error_msg = 'BOOM！Where is your input?'
+        return render(request, 'blog/post_list.html', {'error_msg': error_msg})
+
+    posts = Post.objects.filter(title__icontains=search_input)
+    return render(request, 'blog/post_list.html', {'error_msg': error_msg, 'posts': posts})
